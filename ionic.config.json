@@ -1,0 +1,7 @@
+{
+  "name": "TelaTCC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
