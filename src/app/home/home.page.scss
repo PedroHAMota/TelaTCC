@@ -1,27 +1,60 @@
-#container {
-  text-align: center;
+*{
+  // outline: 1px solid red;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+ion-header{
+  text-align: center;
+  margin-top: 2%;
+  background: none;
+}
+
+.navigation a{
+  position: relative;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  top: 10px;
+}
+
+.navigation a::after{
+  content: '';
   position: absolute;
   left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.navigation a:hover::after{
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.navigation .btnLogin{
+  width: 130px;
+  height: 50px;
+  --background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: .5s;
 }
 
-#container a {
-  text-decoration: none;
+.navigation .btnLogin:hover{
+  background: #fff;
+  color: #162938;
 }
