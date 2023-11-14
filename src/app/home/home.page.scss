@@ -5,10 +5,20 @@
   box-sizing: border-box;
 }
 
-ion-header{
+ion-header {
   text-align: center;
-  margin-top: 2%;
+  // margin-top: 2%;
   background: none;
+}
+
+.imagem-fundo{
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../../assets/img/imagem-fundo.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .navigation a{
@@ -17,7 +27,8 @@ ion-header{
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  top: 10px;
+  top: 40%;
+  margin-left: 40px;
 }
 
 .navigation a::after{
@@ -51,6 +62,7 @@ ion-header{
   color: #fff;
   font-weight: 500;
   margin-left: 40px;
+  margin-top: 15%;
   transition: .5s;
 }
 

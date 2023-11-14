@@ -9,4 +9,32 @@ export class HomePage {
 
   constructor() {}
 
+  onRegisterClick() {
+    const wrapper = document.querySelector('.wrapper');
+    if (wrapper) {
+      wrapper.classList.add('active');
+    }
+  }
+
+  onLoginClick() {
+    const wrapper = document.querySelector('.wrapper');
+    if (wrapper) {
+      wrapper.classList.remove('active');
+    }
+  }
+
+  onBtnPopupClick() {
+    const wrapper = document.querySelector('.wrapper');
+    if (wrapper) {
+      wrapper.classList.add('active-popup');
+    }
+  }
+
+  onIconCloseClick() {
+    const wrapper = document.querySelector('.wrapper');
+    if (wrapper) {
+      wrapper.classList.remove('active-popup');
+    }
+  }
+
 }
