@@ -15,7 +15,7 @@
           <a routerLink="#">Termos</a>
         </ion-col>
         <ion-col size="2" class="navigation">
-          <ion-button class="btnLogin">Login</ion-button>
+          <ion-button class="btnLogin" (click)="onBtnPopupClick()">Login</ion-button>
         </ion-col>
       </ion-row>
     </ion-header>
@@ -25,20 +25,67 @@
       <div class="form-box login">
         <h2>Login</h2>
         <form action="#" (ngSubmit)="onLoginClick()">
+
           <div class="input-box">
             <ion-icon class="icon" name="mail"></ion-icon>
             <ion-input name="email" type="email" required></ion-input>
             <ion-label>Email</ion-label>
           </div>
+
           <div class="input-box">
             <ion-icon class="icon" name="lock-closed"></ion-icon>
             <ion-input name="password" type="password" required></ion-input>
             <ion-label>Password</ion-label>
           </div>
-          <ion-button type="submit">Submit</ion-button>
+
+          <div class="remmember-forgot">
+            <label><ion-checkbox labelPlacement="end"> Lembre-se de mim</ion-checkbox></label>
+            <a routerLink="#">Esqueceu a senha?</a>
+          </div>
+
+          <ion-button type="submit" class="btn">Login</ion-button>
+          <div class="login-register">
+            <p>Não possui uma conta? <a routerLink="#" class="register" (click)="onRegisterClick()">Cadastrar</a></p>
+          </div>
+
         </form>
       </div>
+
+      <div class="form-box register">
+        <h2>Cadastro</h2>
+        <form action="#">
+
+          <div class="input-box">
+            <ion-icon class="icon" name="person"></ion-icon>
+            <ion-input name="nome" type="text" required></ion-input>
+            <ion-label>Nome</ion-label>
+          </div>
+
+          <div class="input-box">
+            <ion-icon class="icon" name="mail"></ion-icon>
+            <ion-input name="email" type="email" required></ion-input>
+            <ion-label>Email</ion-label>
+          </div>
+
+          <div class="input-box">
+            <ion-icon class="icon" name="lock-closed"></ion-icon>
+            <ion-input name="password" type="password" required></ion-input>
+            <ion-label>Password</ion-label>
+          </div>
+
+          <div class="remmember-forgot">
+            <label><ion-checkbox labelPlacement="end">Eu aceito os termos e condiçoes</ion-checkbox></label>
+          </div>
+
+          <ion-button type="submit" class="btn">Cadastrar</ion-button>
+          <div class="login-register">
+            <p>Já possui uma conta? <a routerLink="#" class="register" (click)="onLoginClick()">Login</a></p>
+          </div>
+        </form>
+      </div>
+
     </div>
 
   </div>
+
 </ion-content>
