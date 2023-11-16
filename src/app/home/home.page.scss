@@ -61,14 +61,18 @@ ion-header {
   font-size: 1.1em;
   color: #fff;
   font-weight: 500;
-  margin-left: 40px;
-  margin-top: 8%;
+  // margin-left: 40px;
+  margin-top: 15%;
   transition: .5s;
 }
 
 .navigation .btnLogin:hover{
   background: #fff;
   color: #162938;
+}
+
+.navigation .img-logo{
+  margin-left: 0;
 }
 
 .wrapper{
