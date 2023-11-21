@@ -10,6 +10,15 @@ export class HomePage {
 
   constructor(private router: Router) {}
 
+  bloquearTela = 'tela_principal';
+
+  user = {
+    nome: null,
+    email: null,
+    conectado: false,
+    token: null
+  }
+
   onRegisterClick() {
     const wrapper = document.querySelector('.wrapper');
     if (wrapper) {
@@ -52,12 +61,13 @@ export class HomePage {
 		)
     .then(response => response.json())
     .then(response => {
-      console.log(response);
-      if(response === true){
-        this.router.navigate(['/home']);
-      }else{
-        console.log('erro');
-      }
+      this.user = response;
+      console.log(this.user);
+      // if(response === true){
+      //   this.router.navigate(['/home']);
+      // }else{
+      //   console.log('erro');
+      // }
     })    
     .catch(erro => {
       console.log(erro);
@@ -91,5 +101,7 @@ export class HomePage {
       console.log('processo finalizado');
     })
   }
+
+
 
 }
