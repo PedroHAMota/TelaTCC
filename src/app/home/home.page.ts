@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   onRegisterClick() {
     const wrapper = document.querySelector('.wrapper');
@@ -35,6 +36,60 @@ export class HomePage {
     if (wrapper) {
       wrapper.classList.remove('active-popup');
     }
+  }
+
+  getDados(form: any){
+    let usuario = form;
+
+    fetch('http://localhost/tcc2/login/validacaoLogin.php',
+			{
+			  method: 'POST',
+			  headers: {
+			    'Content-Type': 'application/json',
+			  },
+			  body: JSON.stringify(usuario)
+			}
+		)
+    .then(response => response.json())
+    .then(response => {
+      console.log(response);
+      if(response === true){
+        this.router.navigate(['/home']);
+      }else{
+        console.log('erro');
+      }
+    })    
+    .catch(erro => {
+      console.log(erro);
+    })
+    .finally(()=>{
+      
+      console.log('processo finalizado');
+    })
+  }
+
+  adicionarFuncionarios(form: any){
+    let usuario = form;
+    // console.log(form);
+    fetch('http://localhost/tcc2/cadastro/cadastro.php',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(usuario)
+    })
+    .then(resp => resp.json())
+    .then(resp=> {
+     
+      console.log(resp);
+    })
+    .catch(erro => {
+      console.log(erro);
+    })
+    .finally(()=>{   
+      console.log('processo finalizado');
+    })
   }
 
 }
