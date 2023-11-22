@@ -19,8 +19,8 @@
           <ng-container *ngIf="!this.user.conectado">
             <ion-button class="btnLogin" (click)="onBtnPopupClick()">Login</ion-button>
           </ng-container>
-          <ng-container *ngIf="this.user.conectado">
-            {{ this.user.nome }}
+          <ng-container class="user_name" *ngIf="!this.user.conectado">
+            <p>{{ this.user.nome }}</p>
           </ng-container>
         </ion-col>
       </ion-row>
@@ -128,8 +128,8 @@
       </ion-segment>
     </ion-col>
   </ion-row>
-
-  <ng-container *ngIf="this.user.conectado">
+<!-- *ngIf="this.user.conectado" -->
+  <ng-container>
     <div class="card-mid">
       <ion-row class="ion-justify-content-center item-mid">
         <ion-col size="8" class="ion-text-center">
