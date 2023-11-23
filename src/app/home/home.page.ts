@@ -50,7 +50,7 @@ export class HomePage {
   getDados(form: any){
     let usuario = form;
 
-    fetch('http://localhost/tcc2/login/validacaoLogin.php',
+    fetch('http://localhost/tcc2/cadastro_usuario/login/validacaoLogin.php',
 			{
 			  method: 'POST',
 			  headers: {
@@ -81,7 +81,7 @@ export class HomePage {
   adicionarFuncionarios(form: any){
     let usuario = form;
     // console.log(form);
-    fetch('http://localhost/tcc2/cadastro/cadastro.php',
+    fetch('http://localhost/tcc2/cadastro_usuario/cadastro.php',
     {
       method: 'POST',
       headers: {

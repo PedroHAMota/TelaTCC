@@ -19,8 +19,8 @@
           <ng-container *ngIf="!this.user.conectado">
             <ion-button class="btnLogin" (click)="onBtnPopupClick()">Login</ion-button>
           </ng-container>
-          <ng-container class="user_name" *ngIf="!this.user.conectado">
-            <p>{{ this.user.nome }}</p>
+          <ng-container *ngIf="this.user.conectado">
+            <p>Olá, {{ this.user.nome }}</p>
           </ng-container>
         </ion-col>
       </ion-row>
@@ -33,25 +33,27 @@
         <form action="#" (ngSubmit)="onLoginClick()">
           <form #buscar="ngForm" (ngSubmit)="getDados(buscar.value)">
 
-          <div class="input-box">
-            <ion-icon class="icon" name="mail"></ion-icon>
-            <ion-input ngModel name="email" type="email" fill="solid" label="Email" labelPlacement="floating" helperText="Insira um E-mail válido" errorText="E-mail inválido" ngModel email></ion-input>
-          </div>
+            <div class="input-box">
+              <ion-icon class="icon" name="mail"></ion-icon>
+              <ion-input ngModel name="email" type="email" fill="solid" label="Email" labelPlacement="floating"
+                helperText="Insira um E-mail válido" errorText="E-mail inválido" ngModel email></ion-input>
+            </div>
 
-          <div class="input-box">
-            <ion-icon class="icon" name="lock-closed"></ion-icon>
-            <ion-input ngModel name="password" type="password" fill="solid" label="Senha" labelPlacement="floating"></ion-input>
-          </div>
+            <div class="input-box">
+              <ion-icon class="icon" name="lock-closed"></ion-icon>
+              <ion-input ngModel name="password" type="password" fill="solid" label="Senha"
+                labelPlacement="floating"></ion-input>
+            </div>
 
-          <div class="remmember-forgot">
-            <label><ion-checkbox labelPlacement="end"> Lembre-se de mim</ion-checkbox></label>
-            <a routerLink="#">Esqueceu a senha?</a>
-          </div>
+            <div class="remmember-forgot">
+              <label><ion-checkbox labelPlacement="end"> Lembre-se de mim</ion-checkbox></label>
+              <a routerLink="#">Esqueceu a senha?</a>
+            </div>
 
-          <ion-button type="submit" class="btn" (click)="onIconCloseClick()">Login</ion-button>
-          <div class="login-register">
-            <p>Não possui uma conta? <a routerLink="#" class="register" (click)="onRegisterClick()">Cadastrar</a></p>
-          </div>
+            <ion-button type="submit" class="btn" (click)="onIconCloseClick()">Login</ion-button>
+            <div class="login-register">
+              <p>Não possui uma conta? <a routerLink="#" class="register" (click)="onRegisterClick()">Cadastrar</a></p>
+            </div>
 
           </form>
         </form>
@@ -61,21 +63,23 @@
       <div class="form-box register">
         <h2>Cadastro</h2>
         <!-- <form action="#"> -->
-          <form #inserir="ngForm" (ngSubmit)="adicionarFuncionarios(inserir.value)">
+        <form #inserir="ngForm" (ngSubmit)="adicionarFuncionarios(inserir.value)">
           <div class="input-box">
             <ion-icon class="icon" name="person"></ion-icon>
-            <ion-input ngModel name="nome"  fill="solid" label="Nome" labelPlacement="floating"></ion-input>
+            <ion-input ngModel name="nome" fill="solid" label="Nome" labelPlacement="floating"></ion-input>
           </div>
-<!-- type="email" fill="solid" labelPlacement="floating" helperText="Enter a valid email" errorText="Invalid email" -->
+          <!-- type="email" fill="solid" labelPlacement="floating" helperText="Enter a valid email" errorText="Invalid email" -->
 
           <div class="input-box">
             <ion-icon class="icon" name="mail"></ion-icon>
-            <ion-input ngModel name="email" type="email" fill="solid" label="Email" labelPlacement="floating" helperText="Insira um E-mail válido" errorText="E-mail inválido" ngModel email></ion-input>
+            <ion-input ngModel name="email" type="email" fill="solid" label="Email" labelPlacement="floating"
+              helperText="Insira um E-mail válido" errorText="E-mail inválido" ngModel email></ion-input>
           </div>
 
           <div class="input-box">
             <ion-icon class="icon" name="lock-closed"></ion-icon>
-            <ion-input ngModel name="password" type="password"  fill="solid" label="Senha" labelPlacement="floating"></ion-input>
+            <ion-input ngModel name="password" type="password" fill="solid" label="Senha"
+              labelPlacement="floating"></ion-input>
           </div>
 
           <div class="remmember-forgot">
@@ -92,7 +96,6 @@
 
     </div>
 
-    <!-- <ng-container ngIf="bloquearTela == 'tela_principal'"> -->
     <ion-row class="ion-justify-content-center conteudo-top">
       <ion-col size="8" class="ion-text-center">
         <div class="conteudo-text">
@@ -104,217 +107,8 @@
         </div>
       </ion-col>
     </ion-row>
-  <!-- </ng-container> -->
   </div>
 
-  <ion-row class="ion-justify-content-center  segments">
-    <ion-col size="6" class="ion-text-center">
-      <ion-segment>
-        <ion-segment-button value="home" routerLink="/home">
-          <img src="../../assets/produtos/hambueguer.png" alt="" width="70px" >
-        </ion-segment-button>
-        <ion-segment-button value="heart" routerLink="/home">
-         <img src="../../assets/produtos/sorvete 2.png" alt="" width="70px">
-        </ion-segment-button>
-        <ion-segment-button value="pin" routerLink="/home">
-       <img src="../../assets/produtos/chicket.png" alt="" width="70px">
-        </ion-segment-button>
-        <ion-segment-button value="star" routerLink="/home">
-        <img src="../../assets/produtos/batata.png" alt="" width="70px">
-        </ion-segment-button>
-        <ion-segment-button value="call" routerLink="/home">
-        <img src="../../assets/produtos/istockphoto-508707347-170667a.png" alt="" width="70px">
-        </ion-segment-button>
-      </ion-segment>
-    </ion-col>
-  </ion-row>
-<!-- *ngIf="this.user.conectado" -->
-  <ng-container>
-    <div class="card-mid">
-      <ion-row class="ion-justify-content-center item-mid">
-        <ion-col size="8" class="ion-text-center">
-          <ion-row>
-            <ion-col size="4">
-              <ion-card>
-                <ion-row>
-                  <ion-col size="8">
-                    <ion-row>
-                      <ion-col size="12" class="text-title-card">
-                        <ion-label>Qualquer Dia Oferece</ion-label>
-                      </ion-col>
-                      <ion-col size="12" class="text-title-second-card">
-                        <ion-label>10.99 R$</ion-label>
-                      </ion-col>
-                    </ion-row>      
-                  </ion-col>
-                  <ion-col size="4" class="img-card-1">
-                    <img src="../../assets/logo branco e preto/hamburguer.png" alt="imagem hambuerguer" width="120px">
-                  </ion-col>
-                </ion-row>
-              </ion-card>
-            </ion-col>
-            <ion-col size="4">
-              <ion-card color="danger">
-                <ion-row>
-                  <ion-col size="8">
-                    <ion-row>
-                      <ion-col size="12" class="text-title-card-2">
-                        <ion-label>Outros <br/> Sabores</ion-label>
-                      </ion-col>
-                      <ion-col size="12" class="text-title-second-card-2">
-                        <ion-label>9.99 R$</ion-label>
-                      </ion-col>
-                    </ion-row>      
-                  </ion-col>
-                  <ion-col size="4" class="img-card-2">
-                    <img src="../../assets/itens usado/cokie.png" alt="imagem hambuerguer" width="100px">
-                  </ion-col>
-                </ion-row>
-              </ion-card>
-            </ion-col>
-            <ion-col size="4">
-              <ion-card>
-                <ion-row>
-                  <ion-col size="8">
-                    <ion-row>
-                      <ion-col size="12" class="text-title-card">
-                        <ion-label>Diversas Sobremesas</ion-label>
-                      </ion-col>
-                      <ion-col size="12" class="text-title-second-card">
-                        <ion-label>5.99 R$</ion-label>
-                      </ion-col>
-                    </ion-row>      
-                  </ion-col>
-                  <ion-col size="4" class="img-card-3">
-                    <img src="../../assets/itens usado/sorvete.png" alt="imagem hambuerguer" width="100px">
-                  </ion-col>
-                </ion-row>
-              </ion-card>
-            </ion-col>
-            <ion-col size="6">
-              <ion-card class="card-bottom">
-                <ion-row>
-                  <ion-col size="8">
-                    <ion-row>
-                      <ion-col size="12" class="text-title-card-4">
-                        <ion-label>Feito com muito amor e carinho <br/> chef de alta categoria</ion-label>
-                      </ion-col>
-                    </ion-row>      
-                  </ion-col>
-                  <ion-col size="2.5" class="img-card-4">
-                     <img src="../../assets/itens usado/chef.png" alt="imagem hambuerguer" width="40px">
-                  </ion-col>
-                </ion-row>
-              </ion-card>
-            </ion-col>
-            <ion-col size="6">
-              <ion-card class="card-bottom">
-                <ion-row>
-                  <ion-col size="8">
-                    <ion-row>
-                      <ion-col size="12" class="text-title-card-5">
-                        <ion-label>Você quer ser uma esperança?</ion-label>
-                      </ion-col>
-                      <ion-col size="12" class="button-card-5">
-                        <ion-button color="danger" shape="round">Ajuda aqui</ion-button>
-                      </ion-col>
-                    </ion-row>      
-                  </ion-col>
-                  <ion-col size="2.5" class="img-card-5">
-                     <img src="../../assets/itens usado/coracao.png" alt="imagem hambuerguer" width="100px">
-                  </ion-col>
-                </ion-row>
-              </ion-card>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-      </ion-row>
-    </div>
-    <div class="sobre-nos">
-      <ion-row class="ion-justify-content-center row-sobre">
-        <ion-col size="8" class="ion-text-center">
-          <h1 class="text-title-sobre">Sobre nós</h1>
-        </ion-col>
-        <ion-col size="8" class="ion-text-center"><p class="text-title-second-sobre">O Flavor Fleet é um  sistema de delivery é uma plataforma ou conjunto de processos que facilitam a entrega de produtos ou serviços diretamente ao cliente, muitas vezes de forma conveniente e rápida. Eles são amplamente usados por empresas para levar produtos até os consumidores em suas casas ou locais de escolha. Esses sistemas incluem aplicativos móveis, sites, logística de entregas e opções de pagamento online, proporcionando comodidade aos clientes e aumentando as vendas das empresas.</p>   
-        </ion-col>
-      </ion-row>
-    </div>
-  </ng-container>
-  <ion-footer>
-    <div class="footer-top">
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="" class="col-footer-1 ion-text-start">
-          <img src="../../assets/icons usado no footer/hamburguer footer.png" alt="hambueguer" width="300px">
-        </ion-col>
-        <ion-col size="2" class="col-footer-2 ion-text-center">
-          <ion-row>
-            <ion-col size="12">
-              <h2>Fale Conosco</h2>
-            </ion-col>
-            <ion-col size="12">
-              <img src="../../assets/icons usado no footer/whatsapp cópia.png" alt="logo whatssap" width="25px" class="img-footer">
-              <ion-label>(15)99999-9999</ion-label>
-            </ion-col>
-            <ion-col size="12">
-              <img src="../../assets/icons usado no footer/e-mail cópia.png" alt="email" width="25px">
-              <ion-label>flavor.fleet@gmail.com</ion-label>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-        <ion-col size="2" class="col-footer-3 ion-text-center">
-          <ion-row>
-            <ion-col size="12">
-              <h2>Institucional</h2>
-            </ion-col>
-            <ion-col size="12">
-              <ion-label>Home</ion-label>
-            </ion-col>
-            <ion-col size="12">
-              <ion-label>Sobre</ion-label>
-            </ion-col>
-            <ion-col size="12">
-              <ion-label>Contato</ion-label>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-        <ion-col size="2" class="col-footer-4 ion-text-center">
-          <ion-row>
-            <ion-col size="12">
-              <h2>O que Procura ?</h2>
-            </ion-col>
-            <ion-col size="12">
-              <ion-label>Combos</ion-label>
-            </ion-col>
-            <ion-col size="12">
-              <ion-label>Promoções</ion-label>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-        <ion-col size="3" class="col-footer-5 ion-text-center">
-          <ion-row>
-            <ion-col size="12">
-              <h2>Onde nos encontrar?</h2>
-            </ion-col>
-            <ion-col size="6" class="ion-text-end">
-              <img src="../../assets/icons usado no footer/instagram cópia.png" alt="logo instagram" width="25px">
-            </ion-col>
-            <ion-col size="6" class="ion-text-start">
-              <img src="../../assets/icons usado no footer/whatsapp cópia.png" alt="logo whatssap" width="25px">
-            </ion-col>
-            <ion-col size="12" class="ion-text-end">
-              <img src="../../assets/icons usado no footer/footer hamburguer.png" alt="hambueguer" width="200px">
-            </ion-col>
-          </ion-row>
-        </ion-col>    
-      </ion-row>
-    </div>
-    <div class="footer-bottom">
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="12" class="ion-text-center text-footer">
-          <ion-label class="ion-margin-top">&copy; Flavor Fleet 2023. Todos os direitos reservados</ion-label>
-        </ion-col>
-      </ion-row>
-    </div>
-  </ion-footer>
+  
 
 </ion-content>
