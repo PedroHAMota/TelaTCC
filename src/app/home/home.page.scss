@@ -172,6 +172,7 @@ ion-header {
   // border-bottom: 2px solid #162938;
   margin: 30px 0;
   --background: none;
+  color: black;
 }
 
 .input-fill-solid.sc-ion-input-md-h{
@@ -475,6 +476,10 @@ ion-footer{
      
   }
 }
+
+  @media (max-width: 400px) {
+
+  }
 
 // .card_img{
 //   display: flex;

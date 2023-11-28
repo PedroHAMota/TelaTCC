@@ -10,7 +10,9 @@ export class HomePage {
 
   constructor(private router: Router) {}
 
-  bloquearTela = 'tela_principal';
+  isMobileDevice(): boolean {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
 
   user = {
     nome: null,

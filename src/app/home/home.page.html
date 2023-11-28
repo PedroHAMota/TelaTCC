@@ -1,6 +1,6 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" *ngIf="!isMobileDevice()">
   <div class="imagem-fundo">
-    <ion-header [translucent]="true">
+    <ion-header>
       <ion-row>
         <ion-col size="2" class="navigation">
           <img src="../../assets/img/logo cópia.png" width="100px" class="img-logo">
@@ -227,5 +227,8 @@
       </ion-row>
     </div>
   </ion-footer>
+</ion-content>
 
+<ion-content [fullscreen]="true" *ngIf="isMobileDevice()">
+  
 </ion-content>
