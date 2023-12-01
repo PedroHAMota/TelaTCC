@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
-*{
+* {
   // outline: 1px solid red;
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ ion-header {
   background: none;
 }
 
-.imagem-fundo{
+.imagem-fundo {
   // display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@ ion-header {
   background-position: center;
 }
 
-.navigation a{
+.navigation a {
   position: relative;
   font-size: 1.5em;
   color: #fff;
@@ -33,7 +33,7 @@ ion-header {
   margin-left: 40px;
 }
 
-.navigation a::after{
+.navigation a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -47,12 +47,12 @@ ion-header {
   transition: transform .5s;
 }
 
-.navigation a:hover::after{
+.navigation a:hover::after {
   transform-origin: left;
   transform: scaleX(1);
 }
 
-.navigation .btnLogin{
+.navigation .btnLogin {
   width: 130px;
   height: 50px;
   --background: transparent;
@@ -68,26 +68,26 @@ ion-header {
   transition: .5s;
 }
 
-.navigation .btnLogin:hover{
+.navigation .btnLogin:hover {
   background: #fff;
   color: #162938;
 }
 
-.navigation p{
+.navigation p {
   position: relative;
   // display: flex;
   font-size: 1.4em;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  top: 40%;   
+  top: 40%;
 }
 
-.navigation .img-logo{
+.navigation .img-logo {
   margin-left: 0;
 }
 
-.wrapper{
+.wrapper {
   margin-left: auto;
   margin-right: auto;
   top: 33%;
@@ -106,43 +106,43 @@ ion-header {
   align-items: center;
   overflow: hidden;
   transform: scale(0);
-  transition: transform .5s ease ,height .2s ease;
+  transition: transform .5s ease, height .2s ease;
 }
 
-.wrapper.active-popup{
+.wrapper.active-popup {
   transform: scale(1);
 }
 
-.wrapper.active{
+.wrapper.active {
   height: 520px;
 }
 
-.wrapper .form-box{
+.wrapper .form-box {
   width: 100%;
   padding: 40px;
 }
 
-.wrapper .form-box.login{
+.wrapper .form-box.login {
   transition: transform .18s ease;
   transform: translateX(0);
 }
 
-.wrapper.active .form-box.login{
+.wrapper.active .form-box.login {
   transition: none;
   transform: translateX(-400px);
 }
 
-.wrapper .form-box.register{
+.wrapper .form-box.register {
   position: absolute;
   transform: translateX(400px);
 }
 
-.wrapper.active .form-box.register{
+.wrapper.active .form-box.register {
   transition: transform .18s ease;
   transform: translateX(0);
 }
 
-.wrapper .icon-close{
+.wrapper .icon-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -159,13 +159,13 @@ ion-header {
   z-index: 1;
 }
 
-.form-box h2{
+.form-box h2 {
   font-size: 2em;
   color: #fff;
   text-align: center;
 }
 
-.input-box{
+.input-box {
   position: relative;
   width: 100%;
   height: 50px;
@@ -175,16 +175,16 @@ ion-header {
   color: white;
 }
 
-.input-fill-solid.sc-ion-input-md-h{
+.input-fill-solid.sc-ion-input-md-h {
   --background: none;
   --border-bottom: #F27405;
 }
 
-.sc-ion-input-md-h{
+.sc-ion-input-md-h {
   --highlight-color: #F27405;
 }
 
-.input-box label{
+.input-box label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -196,7 +196,7 @@ ion-header {
   transition: .5s;
 }
 
-.input-box ion-input{
+.input-box ion-input {
   width: 100%;
   height: 100%;
   background: transparent;
@@ -205,15 +205,15 @@ ion-header {
   font-size: 1em;
   // color: #162938;
   font-weight: 600;
-  
+
 }
 
 .input-box ion-input:focus~label,
-.input-box ion-input:valid~label{
+.input-box ion-input:valid~label {
   top: -5px;
 }
 
-.input-box .icon{
+.input-box .icon {
   position: absolute;
   right: 8px;
   font-size: 1.2em;
@@ -221,7 +221,7 @@ ion-header {
   line-height: 57px;
 }
 
-.remmember-forgot{
+.remmember-forgot {
   font-size: .9em;
   color: #fff;
   font-weight: 500;
@@ -230,21 +230,21 @@ ion-header {
   justify-content: space-between;
 }
 
-.remmember-forgot label ion-input{
+.remmember-forgot label ion-input {
   accent-color: #fff;
   margin-right: 3px;
 }
 
-.remmember-forgot a{
+.remmember-forgot a {
   color: #F27405;
   text-decoration: none;
 }
 
-.remmember-forgot a:hover{
+.remmember-forgot a:hover {
   text-decoration: underline;
 }
 
-.btn{
+.btn {
   width: 100%;
   height: 45px;
   --background: #F27405;
@@ -256,7 +256,7 @@ ion-header {
   font-weight: 500;
 }
 
-.login-register{
+.login-register {
   font-size: .9em;
   color: #fff;
   text-align: center;
@@ -264,46 +264,50 @@ ion-header {
   margin: 25px 0 10px;
 }
 
-.login-register p a{
+.login-register p a {
   color: #F27405;
   text-decoration: none;
   font-weight: 600;
 }
 
-.login-register p a:hover{
+.login-register p a:hover {
   text-decoration: underline;
 }
 
-.conteudo-top{
+.conteudo-top {
   margin-top: -10%;
-  & .conteudo-text{
-      width: 100%;
+
+  & .conteudo-text {
+    width: 100%;
   }
-  & .text-title-top{
-      font-size: 4em;
-      font-family: 'Merriweather', serif;
-      font-weight: bold;
-      color: white;
+
+  & .text-title-top {
+    font-size: 4em;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    color: white;
   }
-  & .text-title-second{
-      margin-top: 10px;
-      font-size: 0.8em;       
-      color: white;
+
+  & .text-title-second {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: white;
   }
-  & ion-button{
-      margin-top: 20px;
-      --background: #F27405;
-      font-weight: bold;
-      color: white;
-      font-size: 1.2em;
+
+  & ion-button {
+    margin-top: 20px;
+    --background: #F27405;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2em;
   }
 }
 
-ion-card{
+ion-card {
   border: 3px solid black;
 }
 
-.card_sobrenos{
+.card_sobrenos {
   width: 450px;
   height: 500px;
   margin: 8%;
@@ -311,18 +315,18 @@ ion-card{
   border: 3px solid black;
 }
 
-.img_sobrenos{
+.img_sobrenos {
   margin-top: 40%;
   margin-left: -8%;
   width: 400px;
 }
 
-.img_erva_sobrenos{
+.img_erva_sobrenos {
   margin-top: 40%;
   margin-left: -85%;
 }
 
-.card_sobrenos h2{
+.card_sobrenos h2 {
   margin: 3%;
   text-align: center;
   font-weight: 500;
@@ -331,7 +335,7 @@ ion-card{
   font-size: 3em;
 }
 
-.card_sobrenos p{
+.card_sobrenos p {
   margin: 4%;
   padding: 4%;
   font-weight: 500;
@@ -340,7 +344,7 @@ ion-card{
   font-size: 1.3em;
 }
 
-.card_sobre{
+.card_sobre {
   text-align: center;
   width: 100%;
   height: 500px;
@@ -348,7 +352,7 @@ ion-card{
   margin: 20% 8%;
 }
 
-.card_sobre h2{
+.card_sobre h2 {
   margin: 3%;
   text-align: center;
   font-weight: 500;
@@ -357,7 +361,7 @@ ion-card{
   font-size: 3em;
 }
 
-.card_sobre p{
+.card_sobre p {
   margin: 4%;
   padding: 4%;
   font-weight: 500;
@@ -366,21 +370,21 @@ ion-card{
   font-size: 1.3em
 }
 
-.card_sobre_elevado{
+.card_sobre_elevado {
   margin-top: 10%;
   text-align: center;
   width: 300px;
   height: 450px;
 }
 
-.card_img{
+.card_img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   margin: 8%;
 }
 
-.card_sobre_elevado h2{
+.card_sobre_elevado h2 {
   margin: 3%;
   text-align: center;
   font-weight: 500;
@@ -389,7 +393,7 @@ ion-card{
   font-size: 3em;
 }
 
-.card_sobre_elevado p{
+.card_sobre_elevado p {
   margin: 4%;
   padding: 4%;
   font-weight: 500;
@@ -398,89 +402,182 @@ ion-card{
   font-size: 1.3em
 }
 
-ion-footer{ 
+ion-footer {
   margin-top: 5%;
-  & .footer-top{
-      background-color: black;      
-      & .col-footer-2{
-          margin-top: 50px;
-          & .img-footer{
-              margin-top: 10%;
-          }
-          & h2{
-              color: white;
-              margin-top: 50px;
-              font-weight: bold;
-              font-size: 1.2em;
-          }
-          & ion-label{             
-              color: rgb(160, 159, 159);
-          }
-          img{
-            margin: 2%;
-          }
-      }  
-      & .col-footer-3{
-          margin-top: 50px;
-          h2{
-              color: white;
-              margin-top: 50px;
-              font-weight: bold;
-              font-size: 1.2em;
-          }
-          ion-label{   
-              color: rgb(160, 159, 159);
-          }
-      }  
-      & .col-footer-4{
-          margin-top: 50px;
-          h2{
-              color: white;
-              margin-top: 50px;
-              font-weight: bold;
-              font-size: 1.2em;               
-          }
-          ion-label{
-             
-              color: rgb(160, 159, 159);
-          }
-      }  
-      & .col-footer-5{
-          margin-top: 50px;
-          h2{
-              color: white; 
-              margin-top: 50px;
-              font-weight: bold;
-              font-size: 1.2em;              
-          }
-          ion-label{
-             
-              color: rgb(160, 159, 159);
-          }
-          img{
-            margin: 2%;
-          }
-      }  
-      & .col-footer-6{
-          margin-top: 100px;
+
+  & .footer-top {
+    background-color: black;
+
+    & .col-footer-2 {
+      margin-top: 50px;
+
+      & .img-footer {
+        margin-top: 10%;
       }
+
+      & h2 {
+        color: white;
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      & ion-label {
+        color: rgb(160, 159, 159);
+      }
+
+      img {
+        margin: 2%;
+      }
+    }
+
+    & .col-footer-3 {
+      margin-top: 50px;
+
+      h2 {
+        color: white;
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      ion-label {
+        color: rgb(160, 159, 159);
+      }
+    }
+
+    & .col-footer-4 {
+      margin-top: 50px;
+
+      h2 {
+        color: white;
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      ion-label {
+
+        color: rgb(160, 159, 159);
+      }
+    }
+
+    & .col-footer-5 {
+      margin-top: 50px;
+
+      h2 {
+        color: white;
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      ion-label {
+
+        color: rgb(160, 159, 159);
+      }
+
+      img {
+        margin: 2%;
+      }
+    }
+
+    & .col-footer-6 {
+      margin-top: 100px;
+    }
   }
-  & .footer-bottom{
-      height: 100px;
-      background-color: black;
-      & .text-footer{
-          margin-top: 50px;
-          & ion-label{           
-          color: white;
-          }   
+
+  & .footer-bottom {
+    height: 100px;
+    background-color: black;
+
+    & .text-footer {
+      margin-top: 50px;
+
+      & ion-label {
+        color: white;
       }
-     
+    }
+
   }
 }
 
-  @media (max-width: 400px) {
+@media (max-width: 400px) {
+
+  *{
+    margin: 0;
+    padding: 0;
+    // outline: 1px solid salmon;
+  }
+
+  ion-menu {
+    backdrop-filter: blur(20px);
+  }
+
+  ion-toolbar {
+    --background-color: transparent;
+    --ion-color-base: transparent !important;
+    }
+
+  .imagem-fundo {
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../../assets/img/imagem-fundo.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .text_logo{
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+
+  .text_welcome{
+    margin-top: 50%;
+  }
+
+  .text_welcome h1{
+    margin: 1%;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
 
   }
+
+  .btn_menu{
+    margin: 5%;
+    --background: #F27405;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .navigation_menu{
+    display: flex;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 5%;
+    color: #000000;
+  }
+
+  // .imagem-fundo-mobile{
+  //   justify-content: center;
+  //   align-items: center;
+  //   min-height: 100vh;
+  //   // background: url('../../assets/img/tela-menu.png') no-repeat;
+  //   background-size: cover;
+  //   background-position: center;
+  //   // z-index: -1;
+  // }
+
+  .menu-mobile{
+    // --background-color: transparent;
+    // --ion-color-base: transparent !important;
+  }
+
+}
 
 // .card_img{
 //   display: flex;
@@ -499,7 +596,7 @@ ion-footer{
 // .conteudo-card{
 //   background-color: #000080;
 //   & .card-mid-top{
-      
+
 //       & ion-card{
 //           height: 200px;
 //           margin: 20px;
@@ -599,7 +696,7 @@ ion-footer{
 //           }   
 //           & .img-card-5{
 //               margin-left: 20px;
-              
+
 //           }   
 //       }
 //       & .card-bottom{
@@ -664,7 +761,7 @@ ion-footer{
 //               font-size: 1.2em;               
 //           }
 //           ion-label{
-             
+
 //               color: rgb(160, 159, 159);
 //           }
 //       }  
@@ -677,7 +774,7 @@ ion-footer{
 //               font-size: 1.2em;              
 //           }
 //           ion-label{
-             
+
 //               color: rgb(160, 159, 159);
 //           }
 //       }  
@@ -694,6 +791,6 @@ ion-footer{
 //           color: white;
 //           }   
 //       }
-     
+
 //   }
 // }
