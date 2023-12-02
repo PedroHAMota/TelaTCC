@@ -8,9 +8,13 @@
 }
 
 ion-header {
-  text-align: center;
+  // text-align: center;
   // margin-top: 2%;
   background: none;
+}
+
+ion-header .img-logo{
+  left: 0%;
 }
 
 .imagem-fundo {
@@ -23,13 +27,19 @@ ion-header {
   background-position: center;
 }
 
+.navigation{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .navigation a {
   position: relative;
   font-size: 1.5em;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  top: 40%;
   margin-left: 40px;
 }
 
@@ -63,8 +73,7 @@ ion-header {
   font-size: 1.1em;
   color: #fff;
   font-weight: 500;
-  // margin-left: 40px;
-  margin-top: 20%;
+  margin-left: 15%;
   transition: .5s;
 }
 
@@ -83,9 +92,9 @@ ion-header {
   top: 40%;
 }
 
-.navigation .img-logo {
-  margin-left: 0;
-}
+// .navigation .img-logo {
+//   margin-left: 0;
+// }
 
 .wrapper {
   margin-left: auto;
@@ -275,7 +284,7 @@ ion-header {
 }
 
 .conteudo-top {
-  margin-top: -10%;
+  margin-top: -25%;
 
   & .conteudo-text {
     width: 100%;
@@ -310,20 +319,20 @@ ion-card {
 .card_sobrenos {
   width: 450px;
   height: 500px;
-  margin: 8%;
+  margin: 10%;
   left: 40%;
   border: 3px solid black;
 }
 
 .img_sobrenos {
-  margin-top: 40%;
-  margin-left: -8%;
+  margin-top: 43%;
+  margin-left: 12%;
   width: 400px;
 }
 
 .img_erva_sobrenos {
-  margin-top: 40%;
-  margin-left: -85%;
+  margin-top: 78%;
+  margin-left: -115%;
 }
 
 .card_sobrenos h2 {
@@ -535,6 +544,7 @@ ion-footer {
   }
 
   .text_welcome{
+    text-align: center;
     margin-top: 50%;
   }
 
@@ -560,6 +570,58 @@ ion-footer {
     font-size: 1.5em;
     margin: 5%;
     color: #000000;
+  }
+
+  .card_sobrenos_mobile {
+    width: auto;
+    height: auto;
+    margin: 5%;
+    // left: 40%;
+    border: 3px solid black;
+  }
+
+  .card_sobrenos_mobile h2 {
+    margin: 3%;
+    text-align: center;
+    font-weight: 500;
+    color: black;
+    font-weight: bold;
+    font-size: 3em;
+  }
+  
+  .card_sobrenos_mobile p {
+    margin: 4%;
+    padding: 4%;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    font-size: 1.3em;
+  }
+  
+  .card_sobre_mobile {
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    // margin: 10% 8%;
+    margin: 20% 8%;
+  }
+  
+  .card_sobre_mobile h2 {
+    margin: 3%;
+    text-align: center;
+    font-weight: 500;
+    color: black;
+    font-weight: bold;
+    font-size: 3em;
+  }
+  
+  .card_sobre_mobile p {
+    margin: 4%;
+    padding: 4%;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    font-size: 1.3em
   }
 
   // .imagem-fundo-mobile{
