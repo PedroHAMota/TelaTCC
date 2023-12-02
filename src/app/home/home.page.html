@@ -240,8 +240,9 @@
 
 <ion-content [fullscreen]="true" *ngIf="isMobileDevice()">
   <ion-menu contentId="main-content">
-    <ion-header>
-      <ion-toolbar>
+    
+    <!-- <ion-header>
+        <ion-toolbar color="dark">
         <ion-row>
           <ion-col size="11">
             <ion-title>Bem Vindo(a) ao Flavor Fleet</ion-title>
@@ -256,13 +257,16 @@
 
 
       </ion-toolbar>
-    </ion-header>
+    </ion-header> -->
+  
 
-    <ion-content>
-      <a routerLink="#" class="navigation_menu">Home</a>
-      <a routerLink="#" class="navigation_menu">Cardápio</a>
-      <a routerLink="#" class="navigation_menu">Termos</a>
-      <a routerLink="/login" class="navigation_menu">Login</a>
+    <ion-content color="dark">
+      
+      <a routerLink="#" class="navigation_menu"> <ion-icon name="home-outline"></ion-icon> Home </a>
+      <a routerLink="#" class="navigation_menu"> <ion-icon name="restaurant-outline"></ion-icon> Cardápio </a>
+      <a routerLink="#" class="navigation_menu"> <ion-icon name="document-text-outline"></ion-icon> Termos </a>
+      <a routerLink="/login" class="navigation_menu"> <ion-icon name="log-in-outline"></ion-icon>Login </a>
+  
     </ion-content>
   </ion-menu>
 
@@ -281,6 +285,7 @@
             <ion-title class="text_logo">Flavor Fleet</ion-title>
             <img src="../../assets/img/logo cópia.png" width="80px" slot="end">
           </ion-toolbar>
+        </ion-header>
 
           <ion-row>
             <ion-col size="12" class="text_welcome">
@@ -289,7 +294,7 @@
             </ion-col>
           </ion-row>
 
-        </ion-header>
+        
 
       </div>
     </div>
@@ -309,6 +314,19 @@
       </ion-col>
     </ion-row>
 
+      <ion-row>
+      <ion-col class="card_sobre">
+        <ion-card>
+          <img src="../../assets/img/img foto sobre1.jpg" class="card_img">
+          <h2>Dono</h2>
+          <p>Miguel, um talentoso chef apaixonado pela culinária, realizou seu sonho de abrir o restaurante "Flavor
+            Fleet". Com pratos inovadores e uma atmosfera acolhedora, seu restaurante logo se tornou um sucesso,
+            conquistando críticos e clientes fiéis. Com humildade e dedicação, Miguel inspirou sua equipe e deixou um
+            legado duradouro na cena gastronômica.</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
     <ion-row>
       <ion-col class="card_sobre">
         <ion-card>
@@ -320,16 +338,9 @@
             culinária em geral. </p>
         </ion-card>
       </ion-col>
-      <ion-col class="card_sobre_elevado">
-        <ion-card>
-          <img src="../../assets/img/img foto sobre1.jpg" class="card_img">
-          <h2>Dono</h2>
-          <p>Miguel, um talentoso chef apaixonado pela culinária, realizou seu sonho de abrir o restaurante "Flavor
-            Fleet". Com pratos inovadores e uma atmosfera acolhedora, seu restaurante logo se tornou um sucesso,
-            conquistando críticos e clientes fiéis. Com humildade e dedicação, Miguel inspirou sua equipe e deixou um
-            legado duradouro na cena gastronômica.</p>
-        </ion-card>
-      </ion-col>
+    </ion-row>
+
+      <ion-row>
       <ion-col class="card_sobre">
         <ion-card>
           <img src="../../assets/img/img foto sobre.png" class="card_img">
@@ -341,6 +352,35 @@
         </ion-card>
       </ion-col>
     </ion-row>
+
+    <ion-footer class="footer">
+      <ion-row>
+        <ion-col size="6" class="contact">
+          <h2>Fale Conosco</h2>
+          <p><img src="../../assets/img/icons usado no footer/whatsapp cópia.png" width="20px"> (15) 4002-8922</p>
+          <p><img src="../../assets/img/icons usado no footer/e-mail cópia.png" width="20px"> flavor.fleet@hmail.com</p>
+        </ion-col>
+        <ion-col size="6" class="combos_promocoes">
+          <h2>O que procura?</h2>
+          <p>Combos</p>
+          <p>Promoções</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6" class="pagina">
+          <h2>Institucional</h2>
+          <p><a routerLink="#">Home</a></p>
+          <p><a routerLink="#">Sobre</a></p>
+          <p><a routerLink="#">Contato</a></p>
+        </ion-col>
+        <ion-col size="6" class="local">
+          <h2>Onde nos encontrar?</h2>
+          <img src="../../assets/img/icons usado no footer/instagram cópia.png" width="20px">
+          <img src="../../assets/img/icons usado no footer/whatsapp cópia.png" width="20px">
+        </ion-col>
+      </ion-row>
+    </ion-footer>
   </ion-content>
 
   

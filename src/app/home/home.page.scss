@@ -545,7 +545,7 @@ ion-footer {
 
   .text_welcome{
     text-align: center;
-    margin-top: 50%;
+    margin-bottom: 50%;
   }
 
   .text_welcome h1{
@@ -553,23 +553,22 @@ ion-footer {
     color: #fff;
     font-size: 1.5em;
     font-weight: 700;
-
   }
 
   .btn_menu{
-    margin: 5%;
     --background: #F27405;
-    color: white;
-    font-size: 1.2em;
-    font-weight: 600;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 5%;
   }
 
   .navigation_menu{
     display: flex;
     text-decoration: none;
     font-size: 1.5em;
+    margin-top: 20%;
     margin: 5%;
-    color: #000000;
+    color: #fff;
   }
 
   .card_sobrenos_mobile {
@@ -624,20 +623,47 @@ ion-footer {
     font-size: 1.3em
   }
 
-  // .imagem-fundo-mobile{
-  //   justify-content: center;
-  //   align-items: center;
-  //   min-height: 100vh;
-  //   // background: url('../../assets/img/tela-menu.png') no-repeat;
-  //   background-size: cover;
-  //   background-position: center;
-  //   // z-index: -1;
-  // }
+ .footer{
+  height: 50vh;
+  background: #000000;
+ }
 
-  .menu-mobile{
-    // --background-color: transparent;
-    // --ion-color-base: transparent !important;
-  }
+ .contact{
+  text-align: center;
+  margin-top: 6%;
+  color: #fff;
+ }
+
+ .combos_promocoes{
+  margin-top: 6%;
+  color: #fff;
+  text-align: center;
+ }
+
+ .pagina{
+  margin-top: 20%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+ }
+
+ .pagina p a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  font: 500;
+ }
+
+ .local{
+  margin-top: 20%;
+  color: #fff;
+  text-align: center;
+ }
+
+ .local img{
+  margin-top: 5%;
+  margin: 3%;
+ }
 
 }
 
